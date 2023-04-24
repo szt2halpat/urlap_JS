@@ -1,8 +1,6 @@
 # urlap_JS
 Határidő: május 12. éjfél
 
-Határidő: május 12. éjfél
-
 Tudásszintmérő teszt készítése
 
 Az űrlap a következő elemeket tartalmazza: Személyes adatok és jelszó megadása:
