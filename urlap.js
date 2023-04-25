@@ -5,34 +5,88 @@ let PasswordError = document.getElementById('passwordError');
 
 let ToolTipText = document.querySelector('.tooltip-text');
 let Kerdojel = document.querySelector('.fa-question');
-let Hiba = document.querySelector('input');
+
 
 //let allError = document.getElementById('allError');
 
 const NameRegEx = /^([A-Z]([a-záéúőóüö.]+\s?)){2,}$/gm;
-
+const BirthRegEx = /^(19|20)\d\d([- /.])(0[1-9]|1[012])\2(0[1-9]|[12][0-9]|3[01])$/gm;
+const EmailRegEx = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
 
 function NameValidation()
 {
-    let nev = document.getElementById('fullname').value;
+    let InputValue = document.getElementById('fullname').value;
+    let InputField = document.getElementById('fullname');
 
-    if(!nev.match(NameRegEx))
+    if(!InputValue.match(NameRegEx))
     {
         //NameError.innerHTML = 'RegEx probléma';
         ToolTipText.innerText = 'asdasd';
         Kerdojel.style.visibility = 'visible';
-        Hiba.style.borderBottom = "1px solid red";
+        InputField.style.borderBottom = "1px solid red";
         return false;
     }
     //NameError.innerText = 'minden jo';
     ToolTipText.innerText = '';
     Kerdojel.style.visibility = 'hidden';
-    Hiba.style.borderBottom = "1px solid green";
+    InputField.style.borderBottom = "1px solid green";
 
     return true;
 
 }
 
+function BirthValidation()
+{
+    let InputValue = document.getElementById('birth').value;
+    let InputField = document.getElementById('birth');
+
+    if(!InputValue.match(BirthRegEx))
+    {
+        InputField.style.borderBottom = "1px solid red";
+        return false;
+    }
+    InputField.style.borderBottom = "1px solid green";
+    return true;
+
+
+}
+
+function EmailValidation()
+{
+    let InputValue = document.getElementById('email').value;
+    let InputField = document.getElementById('email');
+
+    if(!InputValue.match(EmailRegEx))
+    {
+        InputField.style.borderBottom = "1px solid red";
+        return false;
+    }
+    InputField.style.borderBottom = "1px solid green";
+    return true;
+
+
+}
+
+function FormValidation()
+{
+    let InputName = document.getElementById('fullname').value;
+    let InputBirth = document.getElementById('birth').value;
+    let InputEmail = document.getElementById('email').value;
+    let InputPasswd = document.getElementById('password').value;
+
+    let jelszo = "jelszo"
+
+    if(!InputName.match(NameRegEx) || !InputBirth.match(BirthRegEx) || !InputEmail.match(EmailRegEx) || InputPasswd !== "jelszo")
+    {
+        alert("Sikertelen küldés.");
+        return false;
+    }
+    alert("Sikeres küldés.");
+    return true;
+
+
+
+}
 window.onload
 {
     console.log("betöltve.");
