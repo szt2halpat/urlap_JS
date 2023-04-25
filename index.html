@@ -9,12 +9,12 @@
 </head>
 <body>
   <div class="container">
-    <form>
+    <form onsubmit="return FormValidation()">
       <i class="fas fa-paper-plane"></i>
 
       <div class="input-group">
         <label>Teljes név</label>
-        <input type="text" placeholder="Teljes név" id="fullname" onkeyup="NameValidation()">
+        <input type="text" placeholder="Teljes név" id="fullname" onblur="NameValidation()">
         <div class="hover-text">
           <span id="nameError"></span>
           <i class="fa-solid fa-question color" id="kerdojel"></i>
@@ -24,19 +24,22 @@
 
       <div class="input-group">
         <label>Születési idő</label>
-        <input type="text" placeholder="2000-01-01">
+        <input type="text" placeholder="2000-01-01" id="birth" onblur="BirthValidation()">
         <span id="birthError"></span>
       </div>
 
       <div class="input-group">
         <label>Email cím</label>
-        <input type="text" placeholder="example@example.com">
-        <span id="emailError"></span>
+        <input type="text" placeholder="example@example.com" id="email" onblur="EmailValidation()">
+        <div class="hover-text">
+          <span id="emailError"></span>
+        </div>
+
       </div>   
 
       <div class="input-group">
         <label>Jelszó</label>
-        <input type="password" minlength="4" maxlength="20">
+        <input type="password" id="password" minlength="4" maxlength="15">
         <span id="passwordError"></span>
       </div>
 
