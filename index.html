@@ -3,13 +3,13 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Teszt</title>
+    <title>Személyes adatok</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
-    <form action="teszt.html" onsubmit="return FormValidation()">
+    <form action="Teszt/Teszt.html" onsubmit="">
       <i class="fas fa-paper-plane"></i>
 
       <div class="input-group">
@@ -39,15 +39,59 @@
 
       <div class="input-group">
         <label>Jelszó</label>
-        <input type="password" id="password" minlength="4" maxlength="15">
+        <input type="password" id="password" value="jelszo" minlength="4" maxlength="15">
         <span id="passwordError"></span>
       </div>
 
-    <button>Küldés</button>
-   
-  </form>
-  
+    <button onclick="FormValidation()">Küldés</button>
+      <input type="button" value="Küldés" id="kuldes" onclick="FormValidation()">
+
+
+      <fieldset id="fieldset01">
+        <legend>Első kérdés</legend>
+        <div id="FirstQ">
+          <input type="radio" id="FirstAnswer" name="drone" value="Másik Feri"
+                 checked>
+          <label for="FirstAnswer">Válasz1</label>
+
+            <input type="radio" id="SecondAnswer" name="drone" value="dewey">
+            <label for="SecondAnswer">Válasz2</label>
+
+            <input type="radio" id="ThirdAnswer" name="drone" value="louie">
+            <label for="ThirdAnswer">Válasz3</label>
+
+        </div>
+        <input type="button" onclick="Previous()" value="Előző">
+        <input type="button" onclick="Next()" value="Következő">
+      </fieldset>
+      <div id="SecondQ">
+        <fieldset id="fieldset02">
+          <legend>Második kérdés</legend>
+          <input type="checkbox" name="masodik" value="Elso" autocomplete="off">
+          <input type="checkbox" name="masodik" value="Masodik" autocomplete="off">
+          <input type="checkbox" name="masodik" value="Harmadik" autocomplete="off">
+          <input type="button" onclick="Previous()" value="Előző">
+          <input type="button" onclick="Next()" value="Következő">
+        </fieldset>
+      </div>
+      <fieldset id="fieldset03">
+        <legend>Harmadik kérdés</legend>
+        asd3
+        <input type="button" onclick="Previous()" value="Előző">
+        <input type="button" onclick="Next()" value="Következő">
+        <input type="button" onclick="Check()" value="Ellenőrzés">
+      </fieldset>
+
+      <div id="Summary">
+        Ellenőrzés százelékos arányban: %
+      </div>
+
+    </form>
+
+
+
   </div>
+
 
   <script src="urlap.js" defer></script>
    
