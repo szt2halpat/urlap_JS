@@ -70,7 +70,7 @@
     font-size: 14px;
 }
 
-form button{
+form input[type="button"]{
     background: #141a34;
     color: #fff;
     border-radius: 4px;
@@ -81,7 +81,19 @@ form button{
     display: block;
     margin: 30px auto 10px;
 }
-
+/*form button
+{
+    background: #141a34;
+    color: #fff;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 10px 40px;
+    outline: 0;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 10px;
+}
+*/
 .input-group span
 {
     color: red;
@@ -91,6 +103,26 @@ form button{
     font-size: 12.5px;
     font-weight: bold;
 }
+
+/*
+    Fieldset(-ek)
+*/
+#fieldset01
+{
+    display: none;
+}
+#fieldset02
+{
+    display: none;
+}
+#fieldset03
+{
+    display: none;
+}
+
+
+
+
 
 /*
     Tooltip textek
