@@ -8,8 +8,8 @@
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="container">
-    <form action="Teszt/Teszt.html" onsubmit="">
+  <div class="container" id="container">
+    <form id="form" class="show">
       <i class="fas fa-paper-plane"></i>
 
       <div class="input-group">
@@ -43,51 +43,16 @@
         <span id="passwordError"></span>
       </div>
 
-    <button onclick="FormValidation()">Küldés</button>
-      <input type="button" value="Küldés" id="kuldes" onclick="FormValidation()">
+      <input type="button" value="Küldés" id="kuldes" onclick="FormValidation();start()">
 
-
-      <fieldset id="fieldset01">
-        <legend>Első kérdés</legend>
-        <div id="FirstQ">
-          <input type="radio" id="FirstAnswer" name="drone" value="Másik Feri"
-                 checked>
-          <label for="FirstAnswer">Válasz1</label>
-
-            <input type="radio" id="SecondAnswer" name="drone" value="dewey">
-            <label for="SecondAnswer">Válasz2</label>
-
-            <input type="radio" id="ThirdAnswer" name="drone" value="louie">
-            <label for="ThirdAnswer">Válasz3</label>
-
-        </div>
-        <input type="button" onclick="Previous()" value="Előző">
-        <input type="button" onclick="Next()" value="Következő">
-      </fieldset>
-      <div id="SecondQ">
-        <fieldset id="fieldset02">
-          <legend>Második kérdés</legend>
-          <input type="checkbox" name="masodik" value="Elso" autocomplete="off">
-          <input type="checkbox" name="masodik" value="Masodik" autocomplete="off">
-          <input type="checkbox" name="masodik" value="Harmadik" autocomplete="off">
-          <input type="button" onclick="Previous()" value="Előző">
-          <input type="button" onclick="Next()" value="Következő">
-        </fieldset>
-      </div>
-      <fieldset id="fieldset03">
-        <legend>Harmadik kérdés</legend>
-        asd3
-        <input type="button" onclick="Previous()" value="Előző">
-        <input type="button" onclick="Next()" value="Következő">
-        <input type="button" onclick="Check()" value="Ellenőrzés">
-      </fieldset>
-
-      <div id="Summary">
-        Ellenőrzés százelékos arányban: %
-      </div>
-
+      <!--
+          <button onclick="FormValidation()">Küldés</button>
+      -->
     </form>
 
+    <div id="teszt">
+      Teszt
+    </div>
 
 
   </div>
