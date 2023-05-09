@@ -32,7 +32,7 @@
     background: #fff;
     border-radius: 4px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-    position: relative;
+    position: absolute;
 }
 .fa-paper-plane{
     position: absolute;
@@ -81,6 +81,19 @@ form input[type="button"]{
     display: block;
     margin: 30px auto 10px;
 }
+button
+{
+    background: #141a34;
+    color: #fff;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 10px 40px;
+    outline: 0;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 10px;
+}
+
 /*form button
 {
     background: #141a34;
@@ -104,21 +117,58 @@ form input[type="button"]{
     font-weight: bold;
 }
 
-/*
-    Fieldset(-ek)
-*/
-#fieldset01
+.container #teszt
+{
+    width: 90%;
+    max-width: 500px;
+    height: 350px;
+    padding: 50px 30px 20px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    display: none;
+}
+
+#teszt.active, #form.active
+{
+    display: block;
+}
+#teszt.deactive, #form.deactive
 {
     display: none;
 }
-#fieldset02
-{
-    display: none;
+
+@keyframes spin1 { 100% { transform:rotate(360deg); } }
+@keyframes spin2 { 100% { transform:rotate(-360deg); } }
+@keyframes idle { 100% {} }
+
+@keyframes zoom-out {
+    from
+    {
+        transform: scale(1, 1);
+    }
+    to
+    {
+        transform: scale(0, 0);
+        opacity: 0;
+    }
 }
-#fieldset03
-{
-    display: none;
+
+@keyframes zoom-in {
+
+    from
+    {
+        transform: scale(0, 0)
+    }
+    to
+    {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+
 }
+
 
 
 
