@@ -117,31 +117,26 @@ button
     font-weight: bold;
 }
 
-.container #teszt
+.container #teszt-container
 {
     width: 90%;
     max-width: 500px;
     height: 350px;
-    padding: 50px 30px 20px;
     background: #fff;
     border-radius: 4px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     position: absolute;
-    display: none;
+    display: block;
 }
 
-#teszt.active, #form.active
+#teszt-container.active, #form.active
 {
     display: block;
 }
-#teszt.deactive, #form.deactive
+#teszt-container.deactive, #form.deactive
 {
     display: none;
 }
-
-@keyframes spin1 { 100% { transform:rotate(360deg); } }
-@keyframes spin2 { 100% { transform:rotate(-360deg); } }
-@keyframes idle { 100% {} }
 
 @keyframes zoom-out {
     from
@@ -169,10 +164,15 @@ button
 
 }
 
-
-
-
-
+#teszt
+{
+    overflow: scroll;
+    background-color: red;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 350px;
+}
 
 /*
     Tooltip textek
