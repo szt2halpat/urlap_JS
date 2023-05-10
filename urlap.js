@@ -84,33 +84,30 @@ function FormValidation()
     if(!InputName.match(NameRegEx) || !InputBirth.match(BirthRegEx) || !InputEmail.match(EmailRegEx) || InputPasswd !== jelszo)
     {
         alert("Sikertelen küldés.");
-        Gomb.disabled = 'false';
         return false;
     }
     alert("Sikeres küldés.");
-    Gomb.disabled = 'true';
-    return true;
 
-
-
-}
-
-function start()
-{
     let FormContainer = document.getElementById('form');
-    let TesztContainer = document.getElementById('teszt');
+    let TesztContainer = document.getElementById('teszt-container');
 
     FormContainer.style.animation = "zoom-out 1.5s linear";
     setTimeout(function ()
     {
         FormContainer.style.display = "none";
-    },1500)
+    },1200)
 
     TesztContainer.style.animation = "zoom-in 1.5s linear"
     setTimeout(function ()
     {
         TesztContainer.style.display = "block";
-    },1600)
+    },1000)
+    return true;
+
+}
+
+function start()
+{
 
     console.log("Teszt");
 
