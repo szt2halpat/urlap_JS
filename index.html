@@ -55,28 +55,28 @@
         <div id="FirstQuestion" onchange="CheckAll()">
           <h4>Melyik a legnépszerűbb programozási nyelv?</h4>
           <br>
-          <input type="radio" name="prog" value="python" autocomplete="off"> Python<br>
-          <input type="radio" name="prog" value="java" autocomplete="off"> Java<br>
-          <input type="radio" name="prog" value="javascript" autocomplete="off"> Javascript
+          <input type="radio" name="prog" value="python"> Python<br>
+          <input type="radio" name="prog" value="java"> Java<br>
+          <input type="radio" name="prog" value="javascript"> Javascript
         </div>
 
 
         <div id="SecondQuestion" onchange="CheckAll()">
           <h4>Melyek a JavaScript főbb alkalmazási területei? (Válassz többet is.)</h4>
           <br>
-          <input type="checkbox" id="scales" name="check" value="a" autocomplete="off"> Webfejlesztés
+          <input type="checkbox" id="scales" class="checkbox" name="check" value="a"> Webfejlesztés
           <br>
-          <input type="checkbox" id="asd2" name="rossz" value="b" autocomplete="off"> Játékfejlesztés <!--name rossz-->
+          <input type="checkbox" id="asd2" class="checkbox" name="rossz" value="b" > Játékfejlesztés <!--name rossz-->
           <br>
-          <input type="checkbox" id="asd3" name="rossz" value="c" autocomplete="off"> Mobilalkalmazások <!--name rossz-->
+          <input type="checkbox" id="asd3" class="checkbox" name="rossz" value="c" > Mobilalkalmazások <!--name rossz-->
           <br>
-          <input type="checkbox" id="asd4" name="check" value="d" autocomplete="off"> Kliens és szerveroldal
+          <input type="checkbox" id="asd4" class="checkbox" name="check" value="d"> Kliens és szerveroldal
         </div>
 
         <div id="ThirdQuestion" onchange="CheckAll()">
           <h4>Mikor jelent meg a Java első nyilvános verziója?</h4>
           <br>
-          <input type="text" id="TextValasz" name="text" placeholder="Válasz.." autocomplete="off">
+          <input type="text" id="TextValasz" name="text" placeholder="Válasz..">
         </div>
 
 
@@ -92,7 +92,7 @@
         <div id="FifthQuestion">
           <h4>Melyik a legnépszerűbb frontend keretrendszer?</h4>
           <br>
-          <select name="def" id="kiegeszito1" onchange="CheckAll()" autocomplete="off">
+          <select name="def" id="kiegeszito1" onchange="CheckAll()">
             <option value="">-- Kérlek válassz egyet --</option>
             <option value="Angular">Angular</option>
             <option value="Vue">Vue</option>
@@ -106,7 +106,7 @@
             <br>
             <h4>Melyik a legelterjedtebb adatbázis-kezelő rendszer?</h4>
             <br>
-            <select name="def" id="kiegeszito2" onchange="CheckAll()" autocomplete="off">
+            <select name="def" id="kiegeszito2" onchange="CheckAll()">
               <option value="">-- Kérlek válassz egyet --</option>
               <option value="MySQL">MySQL</option>
               <option value="PostgreSQL">PostgreSQL</option>

@@ -335,6 +335,7 @@ function CheckAll() {
     let isTextAreaValid = false;
     let isFirstSelectValid = false;
     let isSecondSelectValid = false;
+    let isCheckBoxValid = false;
 
     let gomb = document.getElementById('CheckAnswers');
 
@@ -344,6 +345,9 @@ function CheckAll() {
     const checkbox2 = document.querySelectorAll('input[name="rossz"]')
     const text = document.getElementById('TextValasz')
     const textarea = document.getElementById('textarea')
+
+    let szamlalo = 0;
+
 
     const FirstSelect = document.getElementById("kiegeszito1");
     const SecondSelect = document.getElementById("kiegeszito2");
@@ -355,25 +359,26 @@ function CheckAll() {
         }
     }
 
+
     for (let i = 0; i < checkbox.length; i++) {
         if (checkbox[i].checked) {
-            isCheckBoxGoodChecked = true;
-        }
-        else
-        {
-            isCheckBoxGoodChecked = false;
+            szamlalo++;
         }
     }
 
+
     for (let i = 0; i < checkbox2.length; i++) {
         if (checkbox2[i].checked) {
-            isCheckBoxBadChecked = true;
-        }
-        else
-        {
-            isCheckBoxBadChecked = false;
-        }
+            szamlalo++;
     }
+
+    }
+    if(szamlalo >= 2)
+    {
+        isCheckBoxValid = true;
+    }
+
+
 
     if (text.value.trim() === "") {
         isTextValid = false;
@@ -407,13 +412,15 @@ function CheckAll() {
     {
         isSecondSelectValid = true;
     }
-    if(isRadioChecked && isTextValid && isTextAreaValid && isFirstSelectValid && isSecondSelectValid &&(isCheckBoxBadChecked || isCheckBoxGoodChecked))
+    if(isRadioChecked && isTextValid && isTextAreaValid && isFirstSelectValid && isSecondSelectValid && isCheckBoxValid)
     {
         gomb.disabled = false;
+        console.log("Gomb disabled false")
     }
     else
     {
         gomb.disabled = true;
+        console.log("Gomb disabled true")
     }
 
 }
