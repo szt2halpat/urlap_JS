@@ -51,48 +51,82 @@
     </form>
 
     <div id="teszt-container">
-      <div id="teszt">
-        <h3>Ki volt asd?</h3>
-        <label>Asd</label>
-        <input type="radio">
-        <h3>Ki volt asd?</h3>
-        <label>Asd</label>
-        <input type="radio">
-        <h3>Ki volt asd?</h3>
-        <label>Asd</label>
-        <input type="radio">
-        <h3>Ki volt asd?</h3>
-        <label>Asd</label>
-        <input type="radio">      <h3>Ki volt asd?</h3>
-        <label>Asd</label>
-        <input type="radio">
-        <h3>Ki volt asd?</h3>
-        <label>Asd</label>
-        <input type="radio">      <h3>Ki volt asd?</h3>
-        <label>Asd</label>
-        <input type="radio">
-        <h3>Ki volt asd?</h3>
-        <label>Asd</label>
-        <input type="radio">
-        <h3>Ki volt asd?</h3>
-        <label>Asd</label>
-        <input type="radio">
-        <h3>Ki volt asd?</h3>
-        <label>Asd</label>
-        <input type="radio">
-        <h3>Ki volt asd?</h3>
-        <label>Asd</label>
-        <input type="radio">
-        <h3>Ki volt asd?</h3>
+      <div id="kerdesek">
+        <div id="FirstQuestion" onchange="CheckAll()">
+          <h4>Melyik a legnépszerűbb programozási nyelv?</h4>
+          <br>
+          <input type="radio" name="prog" value="python" autocomplete="off"> Python<br>
+          <input type="radio" name="prog" value="java" autocomplete="off"> Java<br>
+          <input type="radio" name="prog" value="javascript" autocomplete="off"> Javascript
+        </div>
+
+
+        <div id="SecondQuestion" onchange="CheckAll()">
+          <h4>Melyek a JavaScript főbb alkalmazási területei? (Válassz többet is.)</h4>
+          <br>
+          <input type="checkbox" id="scales" name="check" value="a" autocomplete="off"> Webfejlesztés
+          <br>
+          <input type="checkbox" id="asd2" name="rossz" value="b" autocomplete="off"> Játékfejlesztés <!--name rossz-->
+          <br>
+          <input type="checkbox" id="asd3" name="rossz" value="c" autocomplete="off"> Mobilalkalmazások <!--name rossz-->
+          <br>
+          <input type="checkbox" id="asd4" name="check" value="d" autocomplete="off"> Kliens és szerveroldal
+        </div>
+
+        <div id="ThirdQuestion" onchange="CheckAll()">
+          <h4>Mikor jelent meg a Java első nyilvános verziója?</h4>
+          <br>
+          <input type="text" id="TextValasz" name="text" placeholder="Válasz.." autocomplete="off">
+        </div>
+
+
+
+        <div id="FourthQuestion" onchange="CheckAll()">
+          <h4>Minek a rövidítése az "OOP"?</h4>
+          <br>
+        <textarea name="textarea" id="textarea" cols="25" rows="2" placeholder="Válasz..">
+
+	    </textarea>
+          <p id="TextAreaValasz"></p>
+        </div>
+        <div id="FifthQuestion">
+          <h4>Melyik a legnépszerűbb frontend keretrendszer?</h4>
+          <br>
+          <select name="def" id="kiegeszito1" onchange="CheckAll()" autocomplete="off">
+            <option value="">-- Kérlek válassz egyet --</option>
+            <option value="Angular">Angular</option>
+            <option value="Vue">Vue</option>
+            <option value="React">React</option>
+            <option value="Ember">Ember</option>
+          </select>
+
+          <p class="eredmeny">Válasz: </p>
+
+          <div>
+            <br>
+            <h4>Melyik a legelterjedtebb adatbázis-kezelő rendszer?</h4>
+            <br>
+            <select name="def" id="kiegeszito2" onchange="CheckAll()" autocomplete="off">
+              <option value="">-- Kérlek válassz egyet --</option>
+              <option value="MySQL">MySQL</option>
+              <option value="PostgreSQL">PostgreSQL</option>
+              <option value="MongoDB">MongoDB</option>
+              <option value="Oracle">Oracle</option>
+            </select>
+          </div>
+
+          <p class="eredmeny">Válasz: </p>
+          <br>
+          <input type="button" value="Ellenőrzés" id="CheckAnswers" onclick="CheckAnswers()">
+
+          <p id="vegeredmeny"></p>
+
+        </div>
 
       </div>
     </div>
-
-
   </div>
 
-
-  <script src="urlap.js" defer></script>
-   
+  <script src="urlap.js"></script>
 </body>
 </html>
