@@ -5,15 +5,14 @@ let PasswordError = document.getElementById('passwordError');
 
 let score = 0;
 
-let ToolTipText = document.querySelector('.tooltip-text');
-let Kerdojel = document.querySelector('.fa-question');
-
 
 //let allError = document.getElementById('allError');
 
 const NameRegEx = /^([A-Z]([a-záéúőóüö.]+\s?)){2,}$/gm;
 const BirthRegEx = /^(19|20)\d\d([- /.])(0[1-9]|1[012])\2(0[1-9]|[12][0-9]|3[01])$/gm;
-const EmailRegEx = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+const EmailRegEx = /^[a-zA-Z0-9._%+-]{3,}@[a-zA-Z0-9.-]+\.[a-zA-Z]{1,4}$/;
+
+///EMAIL [a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
 
 function NameValidation()
 {
@@ -23,14 +22,10 @@ function NameValidation()
     if(!InputValue.match(NameRegEx))
     {
         //NameError.innerHTML = 'RegEx probléma';
-        ToolTipText.innerText = 'asdasd';
-        Kerdojel.style.visibility = 'visible';
         InputField.style.borderBottom = "1px solid red";
         return false;
     }
     //NameError.innerText = 'minden jo';
-    ToolTipText.innerText = '';
-    Kerdojel.style.visibility = 'hidden';
     InputField.style.borderBottom = "1px solid green";
 
     return true;
@@ -104,13 +99,6 @@ function FormValidation()
         TesztContainer.style.display = "block";
     },1000)
     return true;
-
-}
-
-function start()
-{
-
-    console.log("Teszt");
 
 }
 
@@ -206,11 +194,9 @@ function CheckAnswers()
     megadottValasz = megadottValasz.replace(/\s+/g, ' ').trim().toLowerCase();
 
     if (megadottValasz === elfogadottValasz) {
-        document.getElementById('textarea').style.border = "2px solid green";
         score++;
         isTextAreaValid = true;
     } else {
-        document.getElementById('textarea').style.border = "2px solid red";
         isTextAreaValid = false;
     }
 
@@ -428,8 +414,12 @@ function CheckAll() {
 window.onload
 {
     console.log("betöltve.");
-    Kerdojel.style.visibility = "hidden";
     let gomb = document.getElementById('CheckAnswers');
     gomb.disabled = true;
+
+    let jelszo = document.getElementById("password");
+
+    jelszo.value = "jelszavasjelszo"
+
 
 }

@@ -14,23 +14,21 @@
 
       <div class="input-group">
         <label>Teljes név</label>
-        <input type="text" placeholder="Teljes név" id="fullname" onkeyup="NameValidation()">
+        <input type="text" placeholder="Teljes név" id="fullname" onblur="NameValidation()" autocomplete="off">
         <div class="hover-text">
           <span id="nameError"></span>
-          <i class="fa-solid fa-question color" id="kerdojel"></i>
-          <span class="tooltip-text top"></span>
         </div>
       </div>
 
       <div class="input-group">
         <label>Születési idő</label>
-        <input type="text" placeholder="2000-01-01" id="birth" onblur="BirthValidation()">
+        <input type="text" placeholder="2000-01-01" id="birth" onblur="BirthValidation()" autocomplete="off">
         <span id="birthError"></span>
       </div>
 
       <div class="input-group">
         <label>Email cím</label>
-        <input type="email" placeholder="example@example.com" id="email" onblur="EmailValidation()">
+        <input type="email" placeholder="example@example.com" id="email" onblur="EmailValidation()" autocomplete="off">
         <div class="hover-text">
           <span id="emailError"></span>
         </div>
@@ -39,11 +37,11 @@
 
       <div class="input-group">
         <label>Jelszó</label>
-        <input type="password" id="password" value="jelszo" minlength="4" maxlength="15">
+        <input type="password" id="password" value="jelszo" minlength="4" maxlength="15" autocomplete="off">
         <span id="passwordError"></span>
       </div>
 
-      <input type="button" value="Küldés" id="kuldes" onclick="FormValidation();start()">
+      <input type="button" value="Küldés" id="kuldes" onclick="FormValidation()">
 
       <!--
           <button onclick="FormValidation()">Küldés</button>
@@ -55,28 +53,28 @@
         <div id="FirstQuestion" onchange="CheckAll()">
           <h4>Melyik a legnépszerűbb programozási nyelv?</h4>
           <br>
-          <input type="radio" name="prog" value="python"> Python<br>
-          <input type="radio" name="prog" value="java"> Java<br>
-          <input type="radio" name="prog" value="javascript"> Javascript
+          <input type="radio" name="prog" value="python" autocomplete="off"> Python<br>
+          <input type="radio" name="prog" value="java" autocomplete="off"> Java<br>
+          <input type="radio" name="prog" value="javascript" autocomplete="off"> Javascript
         </div>
 
 
         <div id="SecondQuestion" onchange="CheckAll()">
           <h4>Melyek a JavaScript főbb alkalmazási területei? (Válassz többet is.)</h4>
           <br>
-          <input type="checkbox" id="scales" class="checkbox" name="check" value="a"> Webfejlesztés
+          <input type="checkbox" id="scales" class="checkbox" name="check" value="a" autocomplete="off"> Webfejlesztés
           <br>
-          <input type="checkbox" id="asd2" class="checkbox" name="rossz" value="b" > Játékfejlesztés <!--name rossz-->
+          <input type="checkbox" id="asd2" class="checkbox" name="rossz" value="b" autocomplete="off"> Játékfejlesztés <!--name rossz-->
           <br>
-          <input type="checkbox" id="asd3" class="checkbox" name="rossz" value="c" > Mobilalkalmazások <!--name rossz-->
+          <input type="checkbox" id="asd3" class="checkbox" name="rossz" value="c" autocomplete="off"> Mobilalkalmazások <!--name rossz-->
           <br>
-          <input type="checkbox" id="asd4" class="checkbox" name="check" value="d"> Kliens és szerveroldal
+          <input type="checkbox" id="asd4" class="checkbox" name="check" value="d" autocomplete="off"> Kliens és szerveroldal
         </div>
 
         <div id="ThirdQuestion" onchange="CheckAll()">
           <h4>Mikor jelent meg a Java első nyilvános verziója?</h4>
           <br>
-          <input type="text" id="TextValasz" name="text" placeholder="Válasz..">
+          <input type="text" id="TextValasz" name="text" placeholder="Válasz.." autocomplete="off">
         </div>
 
 
@@ -84,7 +82,7 @@
         <div id="FourthQuestion" onchange="CheckAll()">
           <h4>Minek a rövidítése az "OOP"?</h4>
           <br>
-        <textarea name="textarea" id="textarea" cols="25" rows="2" placeholder="Válasz..">
+        <textarea name="textarea" id="textarea" cols="25" rows="2" placeholder="Válasz.." autocomplete="off">
 
 	    </textarea>
           <p id="TextAreaValasz"></p>
@@ -92,7 +90,7 @@
         <div id="FifthQuestion">
           <h4>Melyik a legnépszerűbb frontend keretrendszer?</h4>
           <br>
-          <select name="def" id="kiegeszito1" onchange="CheckAll()">
+          <select name="def" id="kiegeszito1" onchange="CheckAll();Select()" autocomplete="off">
             <option value="">-- Kérlek válassz egyet --</option>
             <option value="Angular">Angular</option>
             <option value="Vue">Vue</option>
@@ -106,7 +104,7 @@
             <br>
             <h4>Melyik a legelterjedtebb adatbázis-kezelő rendszer?</h4>
             <br>
-            <select name="def" id="kiegeszito2" onchange="CheckAll()">
+            <select name="def" id="kiegeszito2" onchange="CheckAll();Select()" autocomplete="off">
               <option value="">-- Kérlek válassz egyet --</option>
               <option value="MySQL">MySQL</option>
               <option value="PostgreSQL">PostgreSQL</option>
